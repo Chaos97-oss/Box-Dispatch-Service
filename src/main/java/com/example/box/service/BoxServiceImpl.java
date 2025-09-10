@@ -29,8 +29,8 @@ public class BoxServiceImpl implements BoxService {
     @Override
     public List<Box> getAvailableBoxes() {
         return boxRepository.findAll().stream()
-                .filter(b -> (b.getState() == BoxState.IDLE || b.getState() == BoxState.RETURNING) && b.getBatteryCapacity() >= 25)
-                .toList();
+        .filter(b -> b.getBatteryCapacity() >= 25)
+        .toList();
     }
 
     @Override
