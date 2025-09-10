@@ -3,6 +3,9 @@
 A Spring Boot implementation of the Box Dispatch Service assessment.
 The service manages boxes, their lifecycle, items they carry, and operational constraints such as weight and battery levels.
 
+
+
+
 ### 🚀 Features ###
 
 The service provides the following functionality:
@@ -24,6 +27,9 @@ The service provides the following functionality:
 ✅ H2 in-memory database with sample seed data (data.sql)
 
 ✅ Unit tests with MockMvc
+
+
+
 
 ### 🏗️ Design Assumptions ###
 
@@ -67,6 +73,9 @@ All endpoints return a wrapped ApiResponse with responseCode, responseMsg, and r
 
 Errors are handled globally for clean client responses.
 
+
+
+
 ### 📂 Project Structure ###
 src/main/java/com/example/box
 │── controller      # REST controllers
@@ -77,9 +86,12 @@ src/main/java/com/example/box
 │── exception       # Global exception handling
 │── payload         # ApiResponse wrapper
 
-⚡ Endpoints
-1. Create a new box
 
+
+
+### ⚡ Endpoints ###
+>> 1. Create a new box
+>>
 POST /api/boxes
 
 {
@@ -109,7 +121,10 @@ GET /api/boxes/available
 
 GET /api/boxes/{txref}/battery
 
-🛠️ Build & Run
+
+
+
+### 🛠️ Build & Run ###
 
 Requirements:
 
@@ -158,7 +173,10 @@ Failure:
   "responseDesc": "Weight exceeds box capacity"
 }
 
-🧪 Testing with Postman
+
+
+
+### 🧪 Testing with Postman ###
 
 Import the collection (or manually create requests using the endpoints above).
 
