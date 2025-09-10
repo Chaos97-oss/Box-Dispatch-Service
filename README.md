@@ -100,8 +100,8 @@ POST /api/boxes
   "batteryCapacity": 80
 }
 
-2. Load items into a box
-
+>>2. Load items into a box
+>>
 POST /api/boxes/{txref}/items
 
 [
@@ -109,15 +109,18 @@ POST /api/boxes/{txref}/items
   { "name": "item_two", "weight": 100, "code": "ITEM_002" }
 ]
 
-3. Get loaded items for a box
+>>3. Get loaded items for a box
+>>
 
 GET /api/boxes/{txref}/items
 
-4. Get available boxes for loading
+>>4. Get available boxes for loading
+>>
 
 GET /api/boxes/available
 
-5. Check battery level of a box
+>>5. Check battery level of a box
+>>
 
 GET /api/boxes/{txref}/battery
 
@@ -138,8 +141,9 @@ cd box-dispatch-service
 mvn clean package
 mvn spring-boot:run
 
-Run tests
-mvn test
+Run tests:
+>>mvn test
+>>
 
 Access H2 console
 
@@ -153,7 +157,7 @@ Password: (empty)
 
 Success:
 
-{
+>>{
   "responseCode": "00",
   "responseMsg": "Success",
   "data": {
@@ -162,16 +166,16 @@ Success:
     "batteryCapacity": 80,
     "state": "IDLE"
   }
-}
+>>}
 
 
 Failure:
 
-{
+>>{
   "responseCode": "99",
   "responseMsg": "Failed",
   "responseDesc": "Weight exceeds box capacity"
-}
+>>}
 
 
 
@@ -184,7 +188,7 @@ Create a box → Load items → Query items → Check availability → Check bat
 
 Validate different states (e.g., low battery, overweight, duplicate codes).
 
-📌 Notes
+### 📌 Notes ###
 
 Data is seeded automatically from data.sql.
 
