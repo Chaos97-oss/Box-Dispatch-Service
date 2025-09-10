@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Min;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name = "boxes")
 public class Box {
@@ -28,6 +30,7 @@ public class Box {
     @Enumerated(EnumType.STRING)
     private BoxState state = BoxState.IDLE;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "box", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Item> items = new ArrayList<>();
 

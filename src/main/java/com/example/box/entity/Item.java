@@ -1,5 +1,7 @@
 package com.example.box.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -18,6 +20,7 @@ public class Item {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "box_id")
+    @JsonBackReference
     private Box box;
 
     public Item() {}
