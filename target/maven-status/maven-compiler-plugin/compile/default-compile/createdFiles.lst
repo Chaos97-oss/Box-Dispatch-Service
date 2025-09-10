@@ -1,0 +1,11 @@
+com/example/box/entity/Item.class
+com/example/box/repository/BoxRepository.class
+com/example/box/repository/ItemRepository.class
+com/example/box/exception/GlobalExceptionHandler.class
+com/example/box/entity/BoxState.class
+com/example/box/controller/BoxController.class
+com/example/box/dto/ApiResponse.class
+com/example/box/BoxDispatchApplication.class
+com/example/box/service/BoxServiceImpl.class
+com/example/box/entity/Box.class
+com/example/box/service/BoxService.class
